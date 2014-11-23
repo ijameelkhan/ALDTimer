@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/ALDTimer.svg?style=flat)](http://cocoadocs.org/docsets/ALDTimer)
 
 
-[![ScreenShot](https://raw.github.com/andydrizen/ALDClock/master/VideoScreenshot.png)]
+[![ScreenShot](https://raw.githubusercontent.com/ijameelkhan/ALDTimer/master/Example/ALDTimer/screenshot.png)]
 
 
 ## What is this?
@@ -28,7 +28,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Jameel, i.jameelkhan@gmail.com
+Jameel
 
 ## License
 

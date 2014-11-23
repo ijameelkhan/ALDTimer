@@ -10,19 +10,15 @@
 Pod::Spec.new do |s|
   s.name             = "ALDTimer"
   s.version          = "0.1.0"
-  s.summary          = "A short description of ALDTimer."
+  s.summary          = "An interective timer component for iOS."
   s.description      = <<-DESC
-                        The UYLPasswordManager class provides a simple wrapper around Apple Keychain
-                        Services on iOS devices. The class is designed to make it quick and easy to
-                        create, read, update and delete keychain items. Keychain groups are also
-                        supported as is the ability to set the data migration and protection attributes
-                        of keychain items.
+                        An interective timer component for iOS. You can customize the appearance and other properties via IB.
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/ALDTimer"
+  s.homepage         = "https://github.com/ijameelkhan/ALDTimer"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Jameel" => "i.jameelkhan@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/ALDTimer.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/ijameelkhan/ALDTimer.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
