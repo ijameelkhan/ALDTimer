@@ -30,6 +30,12 @@ it, simply add the following line to your Podfile:
 
 Jameel
 
+## Credits
+
+Most of the code is ported from this repo: https://github.com/andydrizen/ALDClock
+
+
+
 ## License
 
 ALDTimer is available under the MIT license. See the LICENSE file for more info.
