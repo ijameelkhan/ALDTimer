@@ -5,6 +5,14 @@
 [![License](https://img.shields.io/cocoapods/l/ALDTimer.svg?style=flat)](http://cocoadocs.org/docsets/ALDTimer)
 [![Platform](https://img.shields.io/cocoapods/p/ALDTimer.svg?style=flat)](http://cocoadocs.org/docsets/ALDTimer)
 
+
+[![ScreenShot](https://raw.github.com/andydrizen/ALDClock/master/VideoScreenshot.png)]
+
+
+## What is this?
+
+An interactive timer component for use in iOS projects.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

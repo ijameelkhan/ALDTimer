@@ -25,6 +25,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		6D30592B1A222EDF007B7766 /* ALDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D30592A1A222EDF007B7766 /* ALDTimer.m */; };
+		6D30592D1A225B4B007B7766 /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D30592C1A225B4B007B7766 /* screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6D3059291A222EDF007B7766 /* ALDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDTimer.h; path = ../../Pod/Classes/ALDTimer.h; sourceTree = "<group>"; };
 		6D30592A1A222EDF007B7766 /* ALDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDTimer.m; path = ../../Pod/Classes/ALDTimer.m; sourceTree = "<group>"; };
+		6D30592C1A225B4B007B7766 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 		7700E9DC230B710ED4628834 /* Pods-ALDTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALDTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALDTimer/Pods-ALDTimer.release.xcconfig"; sourceTree = "<group>"; };
 		8873E24067DB973D8F0FE399 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9B65A94B063E37ABCA70A07D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6D30592C1A225B4B007B7766 /* screenshot.png */,
 				6003F595195388D20070C39A /* ALDTimer-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -285,6 +288,7 @@
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				6D30592D1A225B4B007B7766 /* screenshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

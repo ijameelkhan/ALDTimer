@@ -12,10 +12,11 @@ Pod::Spec.new do |s|
   s.version          = "0.1.0"
   s.summary          = "A short description of ALDTimer."
   s.description      = <<-DESC
-                       An optional longer description of ALDTimer
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                        The UYLPasswordManager class provides a simple wrapper around Apple Keychain
+                        Services on iOS devices. The class is designed to make it quick and easy to
+                        create, read, update and delete keychain items. Keychain groups are also
+                        supported as is the ability to set the data migration and protection attributes
+                        of keychain items.
                        DESC
   s.homepage         = "https://github.com/<GITHUB_USERNAME>/ALDTimer"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
