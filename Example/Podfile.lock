@@ -1,0 +1,14 @@
+PODS:
+  - ALDTimer (0.1.0)
+
+DEPENDENCIES:
+  - ALDTimer (from `../`)
+
+EXTERNAL SOURCES:
+  ALDTimer:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ALDTimer: ee87881faa5a0a9ba32029d33227a789b5daeb93
+
+COCOAPODS: 0.34.4

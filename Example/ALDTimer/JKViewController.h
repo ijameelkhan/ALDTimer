@@ -10,4 +10,8 @@
 
 @interface JKViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *timeLbl;
+
+- (IBAction)timerValueChanged:(id)sender;
+
 @end
