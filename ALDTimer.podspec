@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ALDTimer"
-  s.version          = "0.1.0"
+  s.version          = "0.0.1"
   s.summary          = "An interective timer component for iOS."
   s.description      = <<-DESC
                         An interective timer component for iOS. You can customize the appearance and other properties via IB.
