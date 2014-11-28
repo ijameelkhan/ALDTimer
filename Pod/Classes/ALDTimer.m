@@ -8,9 +8,6 @@
 
 #import "ALDTimer.h"
 
-
-
-
 typedef struct{
     double x;
     double y;
@@ -18,16 +15,13 @@ typedef struct{
 } ALDVector3D;
 
 
-
 @interface ALDTimer ()
 
 @property (nonatomic, assign) CGFloat totalRotation;
 @property (nonatomic, assign) CGFloat radius;
 
-
 - (void)moveHandFromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint;
 - (void)updateDisplayAndListeners;
-
 
 /*this limits angle and interval in interval limits set by user*/
 - (void)updateIntervalInBoundsWithAngleDelta:(float)angleDelta;
@@ -43,9 +37,6 @@ typedef struct{
 
 
 @implementation ALDTimer
-
-
-
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     
@@ -67,20 +58,16 @@ typedef struct{
 
 - (void)awakeFromNib{
     [self commonInit];
-    
 }
 
 - (void)commonInit {
     [super setBackgroundColor:[UIColor clearColor]];
-    
 
     //zero interval
     _totalRotation = 0;
     
-    
     // How wide should the clock be?
     [self updateRadius];
-    
 }
 
 - (void)updateRadius {
@@ -93,11 +80,6 @@ typedef struct{
     [super setFrame:frame];
     [self updateRadius];
 }
-
-
-
-
-
 
 #pragma mark - Tracking Methods
 
@@ -112,7 +94,6 @@ typedef struct{
 
 -(BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
     [super continueTrackingWithTouch:touch withEvent:event];
-    
     
     //Get touch location
     CGPoint currentPoint = [touch locationInView:self];
@@ -132,8 +113,6 @@ typedef struct{
 #pragma mark -
 #pragma mark - Handle Tracking
 
-
-
 -(void)moveHandFromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint {
     
     CGPoint center = CGPointMake(CGRectGetWidth(self.frame)/2.0, CGRectGetHeight(self.frame)/2.0);
@@ -151,10 +130,8 @@ typedef struct{
     [self updateIntervalInBoundsWithAngleDelta:directedDeltaAngle];
 }
 
-
 /*this limits angle and interval in interval limits set by user*/
 - (void)updateIntervalInBoundsWithAngleDelta:(float)angleDelta{
-    
     
     //flip the angle , because we increase timer based on right rotation
     angleDelta= -1*angleDelta;
@@ -183,20 +160,13 @@ typedef struct{
     
     //Redraw
     [self updateDisplayAndListeners];
-    
 }
-
-
 
 - (void)updateDisplayAndListeners {
     
     [self sendActionsForControlEvents:UIControlEventValueChanged];
     [self setNeedsDisplay];
 }
-
-
-
-
 
 #pragma mark -
 
@@ -242,7 +212,6 @@ typedef struct{
     return isCounterClockwise;
 }
 
-
 #pragma mark -
 
 /*returns the inclosing rect for clock*/
@@ -264,31 +233,32 @@ typedef struct{
     return rectForClockFace;
 }
 
-
 - (void)drawRect:(CGRect)rect {
     
-    
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
     
     // Draw the clock background
     CGContextSetFillColorWithColor(context, self.backgroundColor.CGColor);
     CGContextFillEllipseInRect(context, [self clockRect]);
-
     
     //draw the cicles depends on how much cirlces we need
-    int numberOfCirlces = self.maximumInterval/3600;
-    if((self.maximumInterval- numberOfCirlces*3600)>0)
-        numberOfCirlces++;
+    int numberOfCircles = 0;
     
+    double tempInterval = _interval;
     
-    for(int circle = 1 ; circle<=numberOfCirlces; circle++){
-        [self drawCirclesWithNumber:circle context:context];
-        
+    while (tempInterval >= 0) {
+        numberOfCircles = numberOfCircles + 1;
+        tempInterval = tempInterval - 3600;
     }
     
+    if (_interval == self.maximumInterval) {
+        numberOfCircles = numberOfCircles - 1;
+    }
+    
+    for(int circle = 1 ; circle<=numberOfCircles; circle++){
+        [self drawCirclesWithNumber:circle context:context];
+    }
 }
-
 
 /*draws the dots in circles*/
 - (void)drawCirclesWithNumber:(int)cirlce context:(CGContextRef)context{
@@ -297,8 +267,6 @@ typedef struct{
     float dotradius = self.dotRadius - (self.dotRadius*self.decreaseSizeBy/100)*cirlce;
     float offset = self.circleDistance*cirlce;
 
-    
-    
     for(NSInteger i = 0; i < 60; i ++) {
         
         //if we dont do it , it starts at x= 0 ;
@@ -310,7 +278,6 @@ typedef struct{
         CGFloat markingX1 = center.x + markingDistanceFromCenter * cos((M_PI/180)* (i+ angleOffset) * 6 + M_PI);
         CGFloat markingY1 = center.y + - 1 * markingDistanceFromCenter * sin((M_PI/180)* (i+ angleOffset) * 6);
         
-        
         if(self.interval>(i*60+ ((cirlce-1) * 3600)))
             CGContextSetFillColorWithColor(context, self.selectedDotColor.CGColor);
         else
@@ -318,14 +285,10 @@ typedef struct{
         
         CGContextFillEllipseInRect(context, CGRectMake(markingX1-3,
                                                        markingY1-3,dotradius*2,dotradius*2));
-        
-        
     }
     
     // Draw minor markings.
     CGContextDrawPath(context, kCGPathStroke);
-    
-    
 }
 
 
